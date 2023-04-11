@@ -1,8 +1,8 @@
 
 var currentDate = moment().format('dddd') + ' ' + moment().format('Do MMM YYYY');
-var currentHour = moment().format('h:mm:ss a');
+var currentHour = moment().format('h:mm:ss');
 
-var eightAm = $('#8am')
+var eightAm = $('#8am');
 var nineAm = $('#9am');
 var tenAm = $('#10am');
 var elevenAm = $('#11am');
@@ -16,7 +16,7 @@ var sixPm = $('#18pm');
 var sevenPm = $('#19pm');
 
 var hour = moment().hours();
-var userInput;
+var myInput;
 var hourSpan;
 
 var interval = setInterval(function() {
@@ -24,16 +24,16 @@ var interval = setInterval(function() {
   $('#currentDay').html(momentNow.format('YYYY MMMM DD') + ' '
                       + momentNow.format('dddd')
                        .substring(0,3).toUpperCase());
-  $('#currentDay').html(currentDate + " " + momentNow.format('hh:mm:ss A'));
+  $('#currentDay').html(currentDate + " " + momentNow.format('hh:mm:ss '));
 }, 100);
 
 function time() {
 
   console.log("Current Hour " + hour);
-  var time8 = JSON.parse(localStorage.getItem('08:00 am'));
-  nineAm.val(time8);
+  var time8 = JSON.parse(localStorage.getItem('08:00 am'))
+  eightAm.val(time8);
 
-  var time9 = JSON.parse(localStorage.getItem('09:00 am'));
+  var time9 = JSON.parse(localStorage.getItem('09:00 am'))
   nineAm.val(time9);
 
   var time10 = JSON.parse(localStorage.getItem('10:00 am'))
@@ -91,11 +91,11 @@ $(document).ready(function(){
 
 
   $('.saveBtn').on('click', function(){
-    userInput = $(this).siblings('.form-control').val().trim();
-    console.log(userInput);
+    myInput = $(this).siblings('.form-control').val().trim();
+    console.log(myInput);
     hourSpan = $(this).siblings('.input-group-prepend').text().trim();
     console.log(hourSpan);
-    localStorage.setItem(hourSpan, JSON.stringify(userInput));
+    localStorage.setItem(hourSpan, JSON.stringify(myInput));
 
   })
 
