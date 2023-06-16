@@ -1,14 +1,24 @@
-I am using a daily planner to create a schedule
-the current day is displayed at the top of the calendar
-I scroll down
-I am presented with timeblocks for standard business hours
- I view the timeblocks for that day
-each timeblock is color coded to indicate whether it is in the past, present, or future
-I click into a timeblock
-I can enter an event
-I click the save button for that timeblock
-the text for that event is saved in local storage
-I refresh the page
-the saved events persist
+# Work Day Scheduler
+
+
+  ## Table of Contents
+  - [Project Description](#Description)
+  - [Screenshot](#screenshot)
+  - [Email Address](#Email)
+  - [GitHub Username](#Username)
+
+ 
+
+  ## description:
+  To create a schedule about your work day. You are able to save it to local storage so that when you refresh the page your event is still scheduled until you hit the clear button.
+
+  ## Screenshots:
+
+
+  ## Email Address:
+  johnbaldwin82@gmail.com
+
+  ## GitHub Username:
+  https://github.com/JohnBaldwin82
 
 
